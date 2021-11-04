@@ -1,5 +1,5 @@
 # Calculator
-HTML, CSS, JavaScript
+Languages used: HTML, CSS, JavaScript
 
 This project was created to showcase my skills in HTML, CSS, and JavaScript. 
 CSS was used to design the display of the calculator when presented on the webpage. CSS was used to create a bouncing animation for each letter of the title of the webpage. JavaScript was used to perform the operations of the buttons on the calculator.
