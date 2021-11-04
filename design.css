@@ -1,0 +1,146 @@
+    *, *::before, *::after {
+        box-sizing: border-box;
+        font-family: Gotham Rounded, sans-serif;
+        font-weight: normal;
+    }
+
+    /*Creating a radial rainbow background for the website by 
+      overlapping linear gradients with different colours.
+    */
+    body {
+        padding: 0;
+        margin: 0;
+        background: 
+        linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70%),
+        linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70%),
+        linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70%);
+    }
+
+    /*Setting the height of the header*/
+    h1 {
+        height: 0px;
+    }
+
+    h1 span {
+    position: relative;
+    top: 2px;
+    display: inline-block;
+    animation: bounce .5s ease infinite alternate;
+    font-family: Calbiri, sans-serif;
+    font-size: 50px;
+    color: #fff;
+    text-shadow: 0 1px 0 #66B2FF,
+        0 2px 0 #66B2FF,
+        0 3px 0 #66B2FF,
+        0 4px 0 #66B2FF,
+        0 5px 0 #66B2FF,
+        0 6px 0 transparent,
+        0 7px 0 transparent,
+        0 8px 0 transparent,
+        0 9px 0 transparent,
+        0 10px 10px rgba(0, 0, 0, 0.4);
+    }
+
+    h1 span:nth-child(2) {
+        animation-delay: .1s;
+    }
+
+    h1 span:nth-child(3) {
+        animation-delay: .2s;
+    }
+
+    h1 span:nth-child(4) {
+        animation-delay: .3s;
+    }
+
+    h1 span:nth-child(5) {
+        animation-delay: .4s;
+    }
+
+    h1 span:nth-child(6) {
+        animation-delay: .5s;
+    }
+
+    h1 span:nth-child(7) {
+        animation-delay: .6s;
+    }
+
+    h1 span:nth-child(8) {
+        animation-delay: .7s;
+    }
+
+    h1 span:nth-child(9) {
+        animation-delay: .8s;
+    }
+
+    h1 span:nth-child(10) {
+        animation-delay: .9s;
+    }
+
+    @keyframes bounce {
+        100% {
+            top: -5px;
+            text-shadow: 0 1px 0 #CCC,
+                0 2px 0 #CCC,
+                0 3px 0 #CCC,
+                0 4px 0 #CCC,
+                0 5px 0 #CCC,
+                0 6px 0 #CCC,
+                0 7px 0 #CCC,
+                0 8px 0 #CCC,
+                0 9px 0 #CCC,
+                0 50px 25px rgba(0, 0, 0, 0.15);
+        }
+    }
+
+    /*Making the grid for the calculator and buttons*/
+    .calculator-grid {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 70px);
+    }
+
+    /*Setting up the buttons and there background colour*/
+    .calculator-grid > button {
+    cursor: pointer;
+    font-size: 2rem;
+    border: 1px solid white;
+    outline: none;
+    background-color: rgba(255, 255, 255, .75);
+    }
+
+    /*Setting up the colour when cursor is above a button*/
+    .calculator-grid > button:hover {
+    background-color: rgba(255, 255, 255, .9);
+    }
+
+    /*Setting up the AC and DEL buttons to be longer in size than the other buttons*/
+    .span-two {
+    grid-column: span 2;
+    }
+
+    /* Setting up result bar of the calculator */
+    .output {
+    grid-column: 1 / -1; /* Set data in result bar of calculator to span as long as necessary from tip to tip of the row*/
+    background-color: rgba(0, 0, 0, .75); /* Setting background colour to black */
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+    }
+
+    .output .previous-operand {
+    color: rgba(255, 255, 255, .75);
+    font-size: 1.5rem;
+    }
+
+    .output .current-operand {
+    color: white;
+    font-size: 2.5rem;
+    }
